@@ -7,14 +7,14 @@ import googlePlay from './google-play-badge.png'
 ---
 
 <Layout title="GymButler">
-	<main class="flex-row">
+	<main class="flex">
 		<div>
-			<div class="flex-row">
+			<div class="flex">
 				<img width="100" src={logo} alt="GymButler logo" />
 				<h1>GymButler</h1>
 			</div>
 			<p>A one-stop app for calculating percentages for weights, converting between kilograms and pounds, a stopwatch, and a timer.</p>
-			<div class="center">
+			<div class="center flex">
 				<a href="https://apps.apple.com/us/app/gymbutler/id1613277271?itsct=apps_box_link&itscg=30200">
 					<img width="200" src={appStore} alt="download in the app store" />
 				</a>
@@ -46,13 +46,19 @@ import googlePlay from './google-play-badge.png'
 	a {
 		text-decoration: none;
 	}
-	.flex-row {
+	.flex {
 		display: flex;
-		flex-direction: row;
 		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
 	}
 	.center {
 		display: flex;
 		align-items: center;
+	}
+	@media (min-width: 640px) {
+		.flex {
+			flex-wrap: nowrap
+		}
 	}
 </style>
