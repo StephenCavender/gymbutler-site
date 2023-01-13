@@ -1,37 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro'
+import logo from './logo.svg'
+import screen from './screen.png'
+import appStore from './app-store-badge.svg'
+import googlePlay from './google-play-badge.png'
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+<Layout title="GymButler">
+	<main class="flex-row">
+		<div>
+			<div class="flex-row">
+				<img width="100" src={logo} alt="GymButler logo" />
+				<h1>GymButler</h1>
+			</div>
+			<p>A one-stop app for calculating percentages for weights, converting between kilograms and pounds, a stopwatch, and a timer.</p>
+			<div class="center">
+				<a href="https://apps.apple.com/us/app/gymbutler/id1613277271?itsct=apps_box_link&itscg=30200">
+					<img width="200" src={appStore} alt="download in the app store" />
+				</a>
+				<a href="https://play.google.com/store/apps/details?id=com.gymbutler&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+					<img width="200" src={googlePlay} alt="download in google play" />
+				</a>
+			</div>
+		</div>
+		<img width="200" src={screen} alt="app screenshot" />
 	</main>
 </Layout>
 
@@ -42,40 +34,25 @@ import Card from '../components/Card.astro';
 		max-width: 60ch;
 	}
 	h1 {
-		font-size: 3rem;
+		font-size: 2rem;
 		font-weight: 800;
 		margin: 0;
+		color: #fff;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+	p {
+		color: #fff;
+		letter-spacing: 1px;
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
+	a {
+		text-decoration: none;
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
+	.flex-row {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	.center {
+		display: flex;
+		align-items: center;
 	}
 </style>
