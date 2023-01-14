@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import logo from './logo.svg'
-import screen from './screen.png'
-import appStore from './app-store-badge.svg'
-import googlePlay from './google-play-badge.png'
+import logo from '../public/logo.svg'
+import screen from '../public/screen.png'
+import appStore from '../public/app-store-badge.svg'
+import googlePlay from '../public/google-play-badge.png'
+import Footer from '../components/footer.astro'
 ---
 
 <Layout title="GymButler">
@@ -25,6 +26,7 @@ import googlePlay from './google-play-badge.png'
 		</div>
 		<img width="200" src={screen} alt="app screenshot" />
 	</main>
+	<Footer />
 </Layout>
 
 <style>
@@ -45,6 +47,12 @@ import googlePlay from './google-play-badge.png'
 	}
 	a {
 		text-decoration: none;
+    transition: all;
+    transition-duration: 500ms;
+	}
+
+	a:hover {
+		opacity: 0.5;
 	}
 	.flex {
 		display: flex;
