@@ -1,5 +1,6 @@
 {
-  "name": "@example/basics",
+  "name": "gymbutler-site",
+  "description": "Marketing page for GymButler app",
   "type": "module",
   "version": "1.0.0",
   "private": true,
@@ -15,7 +16,9 @@
     "android",
     "astro",
     "react native",
-    "fitness"
+    "fitness",
+    "markdown",
+    "md"
   ],
   "homepage": "https://gymbutler.cavender.io",
   "dependencies": {
