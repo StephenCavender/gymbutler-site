@@ -14,7 +14,8 @@
     "ios",
     "android",
     "astro",
-    "react native"
+    "react native",
+    "fitness"
   ],
   "homepage": "https://gymbutler.cavender.io",
   "dependencies": {
