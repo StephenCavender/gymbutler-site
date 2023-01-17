@@ -9,6 +9,13 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "keywords": [
+    "ios",
+    "android",
+    "astro",
+    "react native"
+  ],
+  "homepage": "https://gymbutler.cavender.io",
   "dependencies": {
     "astro": "^1.9.0"
   }
