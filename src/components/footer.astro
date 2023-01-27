@@ -1,7 +1,12 @@
+---
+import ichthys from '/ichthys.svg'
+---
+
 <footer>
   <a href="/terms">Terms & Conditions</a>
   <a href="/privacy">Privacy</a>
-  <a href="https://dev.cavender.io">© Stephen Cavender</a>
+  <a href="https://bio.cavender.io">© Stephen Cavender</a>
+  <img src={ichthys} alt="ichthys" />
 </footer>
 
 <style>
@@ -12,6 +17,7 @@
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+    align-items: center;
   }
 
   footer a {
@@ -24,6 +30,10 @@
 
   footer a:hover {
     color: #FD992D;
+  }
+
+  footer img {
+    width: 2rem;
   }
 
 </style>
